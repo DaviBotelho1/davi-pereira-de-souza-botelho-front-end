@@ -1,0 +1,26 @@
+<section class="corpo">
+  <h1 class="m-1">Livros</h1>
+
+  <div>
+    <table class="table table-bordered m-5 ">
+  <thead>
+    <tr>
+    <th scope="col">Nome</th>
+    <th scope="col">Editar</th>
+    <th scope="col">Excluir</th>
+  </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let livro of livros">
+          <td>{{livro.titulo}}</td>
+          <td><button type="button" class="btn btn-info btn-sm">Editar</button></td>
+          <td><button type="button" class="btn btn-danger btn-sm" (click)="RemocaoLivro(livro)">Excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary me-md-2" data-dismiss="modal" routerLink="/home">Voltar</button>
+    <button type="button" class="btn btn-primary me-md-2 ">Novo Livro</button>
+  </div>
+</section>

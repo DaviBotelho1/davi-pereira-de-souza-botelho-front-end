@@ -1,0 +1,25 @@
+<section class="corpo ">
+  <h1 class="m-1">Autores</h1>
+  <div class="tabela-autor ">
+    <table class="table table-bordered m-5 ">
+  <thead>
+    <tr>
+    <th scope="col">Nome</th>
+    <th scope="col">Editar</th>
+    <th scope="col">Excluir</th>
+  </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let autores of autores">
+          <td>{{autores.nome}}</td>
+          <td><button type="button" class="btn btn-info">Editar</button></td>
+          <td><button type="button" class="btn btn-danger" (click)="RemocaoAutor(autores)">Excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary me-md-2" data-dismiss="modal" routerLink="/home">Voltar</button>
+    <button type="button" class="btn btn-primary me-md-2">Novo Autor</button>
+  </div>
+</section>
